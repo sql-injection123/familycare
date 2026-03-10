@@ -7,6 +7,7 @@ import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import DoctorCard from '../components/DoctorCard';
 import TestimonialSlider from '../components/TestimonialSlider';
+import GallerySlideshow from '../components/GallerySlideshow';
 
 const Home = () => {
   return (
@@ -128,10 +129,10 @@ const Home = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <DoctorCard 
-              name="Dr. Sarah Jenkins"
-              specialty="Lead Dentist & Orthodontist"
-              experience="12"
-              image="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              name="Dr. Shepherd Mweemba"
+              specialty="Senior Dentist"
+              experience="15"
+              image="/assets/photos/438174651_1119426715774929_5254569140451795555_n.jpg"
               delay={0}
             />
             <DoctorCard 
@@ -172,6 +173,9 @@ const Home = () => {
           <TestimonialSlider />
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <GallerySlideshow />
 
       {/* CTA / Location Preview */}
       <section className="py-20 bg-white">
