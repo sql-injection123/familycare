@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const AppointmentForm = () => {
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -18,13 +22,26 @@ const AppointmentForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate API call
-    setTimeout(() => {
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID_APPOINTMENT,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      
       setIsSubmitted(true);
-      // Reset form could also happen here
-    }, 800);
+    } catch (err) {
+      console.error("Failed to send appointment request:", err);
+      setError("Failed to send request. Please try calling us instead.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -59,7 +76,13 @@ const AppointmentForm = () => {
         <p className="text-slate-500 text-sm">Fill out the form below and we'll confirm your appointment.</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+        {error && (
+          <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm flex items-center gap-3">
+            <AlertCircle size={18} />
+            <p>{error}</p>
+          </div>
+        )}
         {/* Personal Details Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-1">
@@ -103,7 +126,7 @@ const AppointmentForm = () => {
 
         {/* Email Row */}
         <div className="space-y-1">
-          <label htmlFor="email" className="text-sm font-medium text-slate-700 block">Email Address</label>
+          <label htmlFor="email" className="text-sm font-medium text-slate-700 block">Email Address (Optional but recommended)</label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
               <Mail size={18} />
@@ -204,8 +227,12 @@ const AppointmentForm = () => {
           </div>
         </div>
 
-        <button type="submit" className="w-full btn-primary py-4 text-lg font-semibold shadow-lg shadow-primary-500/30">
-          Book Appointment Now
+        <button 
+          type="submit" 
+          disabled={isSubmitting}
+          className="w-full btn-primary py-4 text-lg font-semibold shadow-lg shadow-primary-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? 'Sending Request...' : 'Book Appointment Now'}
         </button>
         
         <p className="text-xs text-center text-slate-500 mt-4">
