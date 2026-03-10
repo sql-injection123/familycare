@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
           {/* Brand & Intro */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -67,15 +67,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-primary-500 shrink-0 mt-1" size={18} />
-                <span className="text-sm text-slate-400">123 Health Avenue, Medical District,<br />New York, NY 10001</span>
+                <span className="text-sm text-slate-400">Plot # 1724 Ngwerere Road,<br />Off Palm Drive, Chelston, Lusaka</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-primary-500 shrink-0" size={18} />
-                <span className="text-sm text-slate-400">(555) 123-4567</span>
+                <span className="text-sm text-slate-400">+260 9771 71 47 54</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-primary-500 shrink-0" size={18} />
-                <span className="text-sm text-slate-400">hello@familycaredental.com</span>
+                <span className="text-sm text-slate-400">familycaredentalsurgery@yahoo.com</span>
               </li>
             </ul>
           </div>

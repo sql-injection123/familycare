@@ -61,9 +61,9 @@ const Navbar = () => {
             </div>
             
             <div className="flex items-center gap-4 border-l border-slate-200 pl-6">
-              <a href="tel:+1234567890" className="flex items-center gap-2 text-slate-600 hover:text-primary-600 font-medium text-sm transition-colors">
+              <a href="tel:+2609771714754" className="flex items-center gap-2 text-slate-600 hover:text-primary-600 font-medium text-sm transition-colors">
                 <Phone size={16} />
-                <span>(555) 123-4567</span>
+                <span>+260 9771 71 47 54</span>
               </a>
               <Link to="/book-appointment" className="btn-primary text-sm px-5 py-2">
                 Book Appointment
@@ -107,9 +107,9 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 mt-2 border-t border-slate-100 px-3">
-                <a href="tel:+1234567890" className="flex items-center justify-center gap-2 w-full mb-3 text-slate-600 font-medium py-3 rounded-md bg-slate-50">
+                <a href="tel:+2609771714754" className="flex items-center justify-center gap-2 w-full mb-3 text-slate-600 font-medium py-3 rounded-md bg-slate-50">
                   <Phone size={18} />
-                  <span>Call (555) 123-4567</span>
+                  <span>Call +260 9771 71 47 54</span>
                 </a>
                 <Link
                   to="/book-appointment"

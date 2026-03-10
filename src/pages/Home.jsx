@@ -72,7 +72,7 @@ const Home = () => {
             >
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1606265752439-1f18756aa5ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/assets/photos/547497702_1118378750424428_6616104366162710653_n.jpg" 
                   alt="Dentist with patient" 
                   className="w-full h-full object-cover"
                 />
@@ -188,7 +188,7 @@ const Home = () => {
                 </Link>
                 <div className="flex items-center gap-3 text-slate-700 font-medium px-4">
                   <Phone className="text-primary-600" size={20} />
-                  <span>(555) 123-4567</span>
+                  <span>+260 9771 71 47 54</span>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">Visit Us</h4>
-                  <p className="text-sm text-slate-500">123 Health Avenue, NY</p>
+                  <p className="text-sm text-slate-500">Plot # 1724 Ngwerere Road, Chelston, Lusaka</p>
                 </div>
               </div>
               

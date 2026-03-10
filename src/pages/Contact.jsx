@@ -28,8 +28,8 @@ const Contact = () => {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Phone</h3>
                 <p className="text-sm text-slate-500 mb-3">Call us for immediate assistance.</p>
-                <a href="tel:+1234567890" className="text-primary-600 font-bold hover:underline mt-auto">
-                  (555) 123-4567
+                <a href="tel:+2609771714754" className="text-primary-600 font-bold hover:underline mt-auto">
+                  +260 9771 71 47 54
                 </a>
               </div>
               
@@ -50,8 +50,8 @@ const Contact = () => {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Email</h3>
                 <p className="text-sm text-slate-500 mb-3">Drop us a line anytime.</p>
-                <a href="mailto:hello@familycaredental.com" className="text-primary-600 font-medium hover:underline mt-auto word-break break-all">
-                  hello@familycaredental.com
+                <a href="mailto:familycaredentalsurgery@yahoo.com" className="text-primary-600 font-medium hover:underline mt-auto word-break break-all">
+                  familycaredentalsurgery@yahoo.com
                 </a>
               </div>
 
@@ -61,9 +61,9 @@ const Contact = () => {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Hours</h3>
                 <ul className="text-sm text-slate-500 w-full mt-auto">
-                  <li className="flex justify-between border-b border-slate-50 pb-1 mb-1"><span>Mon-Fri:</span> <span>8am - 7pm</span></li>
-                  <li className="flex justify-between border-b border-slate-50 pb-1 mb-1"><span>Sat:</span> <span>9am - 4pm</span></li>
-                  <li className="flex justify-between"><span>Sun:</span> <span>Closed</span></li>
+                  <li className="flex justify-between border-b border-slate-50 pb-1 mb-1"><span>Mon-Fri:</span> <span>8am - 5pm</span></li>
+                  <li className="flex justify-between border-b border-slate-50 pb-1 mb-1"><span>Sat:</span> <span>Closed</span></li>
+                  <li className="flex justify-between"><span>Sun:</span> <span>8am - 1pm</span></li>
                 </ul>
               </div>
 
@@ -75,7 +75,7 @@ const Contact = () => {
                 <MapPin className="text-primary-600 shrink-0" size={24} />
                 <div>
                   <h3 className="font-bold text-slate-900">Visit Our Clinic</h3>
-                  <p className="text-sm text-slate-600">123 Health Avenue, Medical District, NY 10001</p>
+                  <p className="text-sm text-slate-600">Plot # 1724 Ngwerere Road, Off Palm Drive, Chelston, Lusaka, Zambia</p>
                 </div>
               </div>
               

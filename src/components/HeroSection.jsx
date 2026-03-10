@@ -42,7 +42,7 @@ const HeroSection = () => {
                 <Calendar size={20} className="mr-2" />
                 Book Appointment
               </Link>
-              <a href="tel:+1234567890" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
+              <a href="tel:+2609771714754" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
                 <PhoneCall size={20} className="mr-2" />
                 Call Now
               </a>
@@ -83,8 +83,8 @@ const HeroSection = () => {
               {/* Fallback pattern if image is missing */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Modern Dental Clinic" 
+                  src="/assets/photos/546539357_1118378737091096_8214183341256324701_n.jpg" 
+                  alt="Family Care Dental Clinic" 
                   className="w-full h-full object-cover"
                 />
               </div>

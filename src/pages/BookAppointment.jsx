@@ -54,8 +54,8 @@ const BookAppointment = () => {
                   <div>
                     <h4 className="font-semibold text-slate-900 text-sm">Emergency Dental Care</h4>
                     <p className="text-sm text-slate-500 mb-2">Available 24/7 for severe pain or trauma.</p>
-                    <a href="tel:+1234567890" className="text-red-500 font-bold hover:underline">
-                      Call (555) 999-EMERG
+                    <a href="tel:+2609771714754" className="text-red-500 font-bold hover:underline">
+                      Call +260 9771 71 47 54
                     </a>
                   </div>
                 </div>
@@ -69,9 +69,9 @@ const BookAppointment = () => {
                   <div>
                     <h4 className="font-semibold text-slate-900 text-sm">Working Hours</h4>
                     <ul className="text-sm text-slate-500 space-y-1 mt-2">
-                      <li className="flex justify-between"><span>Mon - Fri:</span> <span>8:00 AM - 7:00 PM</span></li>
-                      <li className="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
-                      <li className="flex justify-between"><span>Sunday:</span> <span>Closed</span></li>
+                      <li className="flex justify-between"><span>Mon - Fri:</span> <span>8:00 AM - 5:00 PM</span></li>
+                      <li className="flex justify-between"><span>Saturday:</span> <span>Closed</span></li>
+                      <li className="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 1:00 PM</span></li>
                     </ul>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const BookAppointment = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 text-sm">Location</h4>
-                    <p className="text-sm text-slate-500 mt-1">123 Health Avenue, Medical District, NY 10001</p>
+                    <p className="text-sm text-slate-500 mt-1">Plot # 1724 Ngwerere Road, Chelston, Lusaka, Zambia</p>
                   </div>
                 </div>
               </div>
