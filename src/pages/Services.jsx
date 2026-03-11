@@ -3,14 +3,15 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Sparkles, Smile, Coffee, Activity, Beaker, Heart, Scissors, Calendar, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const ServiceDetailsCard = ({ icon: Icon, title, description, benefits, delay = 0 }) => {
+const ServiceDetailsCard = ({ icon: Icon, title, description, benefits, delay = 0, id = "" }) => {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="bg-white rounded-2xl p-8 shadow-soft border border-slate-100 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
+      className="bg-white rounded-2xl p-8 shadow-soft border border-slate-100 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 scroll-mt-32"
     >
       <div className="w-16 h-16 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-6">
         <Icon size={32} />
@@ -50,48 +51,56 @@ const CheckCircle = ({ size, className }) => (
 const Services = () => {
   const allServices = [
     {
+      id: "general-checkups",
       icon: Smile,
       title: "General Dental Checkups",
       description: "Comprehensive oral examinations including digital X-rays, oral cancer screenings, and personalized treatment planning.",
       benefits: ["Early detection of issues", "Custom treatment plans", "Preventative focus"]
     },
     {
+      id: "teeth-cleaning",
       icon: Sparkles,
       title: "Teeth Cleaning",
       description: "Professional prophylaxis to remove harmful plaque, tartar, and stains that normal brushing misses.",
       benefits: ["Fresher breath", "Reduced cavity risk", "Gum disease prevention"]
     },
     {
+      id: "teeth-whitening",
       icon: Beaker,
       title: "Teeth Whitening",
       description: "Safe, effective professional whitening treatments to dramatically brighten your smile in a single visit.",
       benefits: ["Immediate results", "Safe for enamel", "Long-lasting brightness"]
     },
     {
+      id: "tooth-extraction",
       icon: Scissors,
       title: "Tooth Extraction",
       description: "Gentle, pain-free extractions including wisdom teeth removal, performed with advanced anesthesia techniques.",
       benefits: ["Pain relief", "Prevents crowding", "Quick recovery protocols"]
     },
     {
+      id: "root-canal",
       icon: Activity,
       title: "Root Canal Treatment",
       description: "Endodontic therapy to save severely infected or damaged teeth, relieving pain and restoring function.",
       benefits: ["Saves natural tooth", "Eliminates pain/infection", "High success rate"]
     },
     {
+      id: "orthodontics",
       icon: Heart,
       title: "Braces / Orthodontics",
       description: "Traditional braces and clear aligner systems (like Invisalign) to straighten teeth and correct bite issues.",
       benefits: ["Improved aesthetics", "Easier cleaning", "Better bite function"]
     },
     {
+      id: "dental-implants",
       icon: Coffee,
       title: "Dental Implants",
       description: "The gold standard for tooth replacement. Permanent titanium posts topped with natural-looking crowns.",
       benefits: ["Looks & feels natural", "Permanent solution", "Prevents bone loss"]
     },
     {
+      id: "pediatric-dentistry",
       icon: ShieldCheck,
       title: "Pediatric Dentistry",
       description: "Specialized, gentle care designed specifically for children, from infants to teenagers.",
@@ -125,6 +134,7 @@ const Services = () => {
             {allServices.map((service, index) => (
               <ServiceDetailsCard 
                 key={index}
+                id={service.id}
                 icon={service.icon}
                 title={service.title}
                 description={service.description}

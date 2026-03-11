@@ -53,11 +53,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-sm hover:text-primary-400 transition-colors">General Dentistry</Link></li>
-              <li><Link to="/services" className="text-sm hover:text-primary-400 transition-colors">Cosmetic Dentistry</Link></li>
-              <li><Link to="/services" className="text-sm hover:text-primary-400 transition-colors">Orthodontics & Braces</Link></li>
-              <li><Link to="/services" className="text-sm hover:text-primary-400 transition-colors">Dental Implants</Link></li>
-              <li><Link to="/services" className="text-sm hover:text-primary-400 transition-colors">Pediatric Care</Link></li>
+              <li><a href="/services#general-checkups" className="text-sm hover:text-primary-400 transition-colors">General Dentistry</a></li>
+              <li><a href="/services#teeth-whitening" className="text-sm hover:text-primary-400 transition-colors">Cosmetic Dentistry</a></li>
+              <li><a href="/services#orthodontics" className="text-sm hover:text-primary-400 transition-colors">Orthodontics & Braces</a></li>
+              <li><a href="/services#dental-implants" className="text-sm hover:text-primary-400 transition-colors">Dental Implants</a></li>
+              <li><a href="/services#pediatric-dentistry" className="text-sm hover:text-primary-400 transition-colors">Pediatric Care</a></li>
             </ul>
           </div>
 
