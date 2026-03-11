@@ -1,4 +1,5 @@
-import React from 'react';
+// src/pages/Home.jsx
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Sparkles, Smile, Coffee, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,8 +9,12 @@ import ServiceCard from '../components/ServiceCard';
 import DoctorCard from '../components/DoctorCard';
 import TestimonialSlider from '../components/TestimonialSlider';
 import GallerySlideshow from '../components/GallerySlideshow';
+import SubmitReview from '../components/SubmitReview';
 
 const Home = () => {
+  // Trigger slider refresh when a new review is submitted
+  const [reviewsUpdated, setReviewsUpdated] = useState(false);
+
   return (
     <div className="bg-white">
       <HeroSection />
@@ -153,24 +158,20 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary-600 -z-20"></div>
-        {/* Decorative background shape */}
-        <svg className="absolute top-0 left-0 w-full h-full text-primary-700/50 -z-10" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="currentColor" />
-          <path d="M0,50 Q50,0 100,50 Q50,100 0,50" fill="white" opacity="0.1" />
-        </svg>
+      {/* Submit Review Section */}
+      <SubmitReview onNewReview={() => setReviewsUpdated((prev) => !prev)} />
 
+      {/* Testimonials Slider */}
+      <section className="py-20 relative overflow-hidden bg-primary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Patients Say</h2>
             <p className="text-lg text-primary-100">
-              Don't just take our word for it. Read honest reviews from our valued patients.
+              Honest reviews from our valued patients.
             </p>
           </div>
           
-          <TestimonialSlider />
+          <TestimonialSlider key={reviewsUpdated ? 'updated' : 'initial'} />
         </div>
       </section>
 
@@ -226,7 +227,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
