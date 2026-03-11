@@ -5,27 +5,27 @@ import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Jenkins",
+    name: "Mutale Mwape",
     role: "Regular Patient",
-    content: "The best dental experience I've ever had! The staff is incredibly friendly, and Dr. Smith made sure I was comfortable throughout my entire procedure. Highly recommend to anyone with dental anxiety.",
+    content: "The best dental experience I've ever had in Lusaka! The staff is incredibly friendly, and Dr. Shepherd made sure I was comfortable throughout my entire procedure. Highly recommend to anyone in Chelston.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Chanda Kapiri",
     role: "Orthodontic Patient",
-    content: "Getting braces here was a breeze. They explained every step of the process clearly and the results are amazing. The clinic is modern, clean, and uses the latest technology.",
+    content: "Getting my braces done here was such a smooth process. They explained everything clearly and the results are already showing. The clinic is modern, clean, and right here in our neighborhood.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Mother of Two",
-    content: "Finding a good pediatric dentist is tough, but Family Care Dental is wonderful with kids. They have a gentle approach that makes my children actually look forward to their checkups!",
+    name: "Kondwani Banda",
+    role: "Family Care Patient",
+    content: "Finding a dentist who is good with kids is tough, but Family Care Dental is wonderful. My children actually look forward to their checkups! Very professional and caring team.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   }
 ];
 

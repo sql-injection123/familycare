@@ -90,7 +90,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Floating Element 1 */}
+            {/* Floating Element 1 – Patient count badge */}
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -100,23 +100,23 @@ const HeroSection = () => {
                 <ShieldCheck size={20} />
               </div>
               <div>
-                <p className="text-xs text-slate-500 font-medium">Rated</p>
-                <p className="text-sm font-bold text-slate-900">5.0 / 5.0 Stars</p>
+                <p className="text-xs text-slate-500 font-medium">Trusted by</p>
+                <p className="text-sm font-bold text-slate-900">500+ Happy Patients</p>
               </div>
             </motion.div>
 
-            {/* Floating Element 2 */}
+            {/* Floating Element 2 – Opening hours badge */}
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               className="absolute bottom-16 -right-6 bg-white p-4 rounded-xl shadow-xl z-20 hidden md:flex items-center gap-3"
             >
               <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
-                <Calendar size={20} />
+                <Clock size={20} />
               </div>
               <div>
-                <p className="text-xs text-slate-500 font-medium">Next Available</p>
-                <p className="text-sm font-bold text-slate-900">Today at 2:00 PM</p>
+                <p className="text-xs text-slate-500 font-medium">Open Mon – Sat</p>
+                <p className="text-sm font-bold text-slate-900">8:00 AM – 5:00 PM</p>
               </div>
             </motion.div>
           </motion.div>
